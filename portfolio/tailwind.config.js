@@ -11,6 +11,8 @@ export default {
           hero_title_light: "#AEBCCF",
           hero_title_dark: "#1F2937",
           text_gray: "#6B7280",
+          subtitle_gray: "#1F2937",
+          title_gray_dark: "#AEBCCF",
         },
         secondary: {
         },
