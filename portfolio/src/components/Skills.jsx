@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 import { useGlobalContext } from "../context/GlobalContext";
 import useTranslation from "../hooks/useTranslation";
 
@@ -8,7 +7,7 @@ const Skills = () => {
   const { skills } = data;
 
   return (
-    <section id="skills" className="py-12 px-8 bg-background-light dark:bg-background-dark">
+    <section id="skills" className="pt-12 pb-6 px-8 bg-background-light dark:bg-background-dark">
       
       <h2 className="text-3xl font-bold text-left mb-4 text-primary-subtitle_gray dark:text-primary-title_gray_dark">
         {t.skills.title}

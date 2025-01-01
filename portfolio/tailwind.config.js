@@ -13,6 +13,9 @@ export default {
           text_gray: "#6B7280",
           subtitle_gray: "#1F2937",
           title_gray_dark: "#AEBCCF",
+          project_category_light: "#3730A3",
+          project_category_dark: "#8F88FF",
+          project_link_dark: "#8F88FF"
         },
         secondary: {
         },

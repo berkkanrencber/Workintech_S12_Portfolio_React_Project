@@ -23,7 +23,7 @@ export default {
     },
     profile: {
       title: "Profile",
-      personalInfo: "Personal Info",
+      personalInfo: "Profile",
       dob: "Date of Birth",
       location: "Location",
       educationStatus: "Education Status",

@@ -62,7 +62,7 @@ const Navbar = () => {
               className="px-1 py-1 text-sm bg-transparent border-none outline-none focus:outline-none hover:outline-none text-primary-purple dark:text-primary-light_purple"
             >
               {t.navbar.languageSwitch}{" "}
-              <span className="text-[#777777]">&apos;ye geç</span>
+              {/* <span className="text-[#777777]">&apos;ye geç</span> */}
             </button>
           </div>
         </div>
