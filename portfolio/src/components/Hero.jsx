@@ -9,16 +9,16 @@ const Hero = () => {
   return (
     <section className="flex flex-col md:flex-row items-center justify-center md:justify-between px-8 py-16 bg-background-light dark:bg-background-dark text-gray-800 dark:text-white">
       
-      <div className="md:w-5/12 text-center md:text-left">
+      <div className="md:w-1/2 text-center md:text-left">
         <div className="flex items-center md:justify-start justify-center gap-4 mb-4">
             <div className="h-px w-20 bg-primary-purple dark:bg-primary-light_purple md:block hidden"></div>
             <span className="text-primary-purple dark:text-primary-light_purple">{personal.name}</span>
         </div>
         <h1 className="text-primary-hero_title_dark dark:text-primary-hero_title_light text-4xl font-bold leading-tight mb-4">
-          {personal.mainTitle1} <br />
-          {personal.mainTitle2}
+          {personal.title} <br />
+          {personal.subtitle}
         </h1>
-        <p className="text-primary-text_gray dark:text-white text-base mb-6">{t.hero.description}</p>
+        <p className="text-primary-text_gray dark:text-white text-base mb-6">{personal.about}</p>
         <div className="flex flex-wrap justify-center md:justify-start gap-4">
           <a
             href="#contact"

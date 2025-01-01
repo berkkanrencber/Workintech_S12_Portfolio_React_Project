@@ -1,6 +1,7 @@
 /* eslint-disable react/prop-types */
 import { createContext, useState, useContext, useEffect } from "react";
-import data from "../data";
+import data_en from "../data_en";
+import data_tr from "../data_tr";
 
 const GlobalContext = createContext();
 
@@ -9,6 +10,7 @@ export const GlobalProvider = ({ children }) => {
   const [language, setLanguage] = useState(
     localStorage.getItem("language") || "en"
   );
+  const data = language === "en" ? data_en : data_tr;
 
   useEffect(() => {
     document.documentElement.className = theme;

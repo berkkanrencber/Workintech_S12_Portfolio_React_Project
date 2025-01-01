@@ -2,16 +2,13 @@ import { useGlobalContext } from "../context/GlobalContext";
 import useTranslation from "../hooks/useTranslation";
 
 const Navbar = () => {
-  const { theme, toggleTheme, toggleLanguage } = useGlobalContext();
+  const { theme, language, toggleTheme, toggleLanguage } = useGlobalContext();
   const t = useTranslation();
 
   return (
     <nav className="flex flex-col items-center bg-background-light dark:bg-background-dark sm:px-8 py-4 px-1">
-      
       <div className="flex flex-col sm:flex-row sm:justify-end w-full sm:max-w-7xl justify-center items-center mb-4">
-        
         <div className="flex flex-col sm:flex-row items-center gap-2">
-          
           <div className="relative inline-block w-11 h-5">
             <input
               id="theme-switch"
@@ -50,30 +47,38 @@ const Navbar = () => {
             </label>
           </div>
           <span className="text-[#777777] dark:text-[#D9D9D9] text-xs font-medium">
-            {theme === "dark" ? "LIGHT MODE" : "DARK MODE"}
+            {theme === "dark" ? t.navbar.lightMode : t.navbar.darkMode}
           </span>
 
           <div className="sm:w-px sm:h-5 w-10 h-px bg-gray-400 dark:bg-gray-600"></div>
-          
-          <div className="flex items-center">
 
+          <div className="flex items-center">
             <button
               onClick={toggleLanguage}
               className="px-1 py-1 text-sm bg-transparent border-none outline-none focus:outline-none hover:outline-none text-primary-purple dark:text-primary-light_purple"
             >
-              {t.navbar.languageSwitch}{" "}
-              {/* <span className="text-[#777777]">&apos;ye geç</span> */}
+              {language == "en" && (
+                <>
+                  {t.navbar.languageSwitch}
+                  <span className="text-[#777777]">&apos;YE GEÇ</span>
+                </>
+              )}
+              {language == "tr" && (
+                <>
+                  <span className="text-[#777777]">SWITCH TO </span>{" "}
+                  {t.navbar.languageSwitch}
+                </>
+              )}
             </button>
           </div>
         </div>
       </div>
 
       <div className="flex sm:flex-row flex-col items-center justify-between w-full">
-        
         <div className="flex items-center gap-3">
           <div className="w-10 h-10 rounded-full bg-background-logo_light dark:bg-background-logo_dark flex items-center justify-center sm:mb-0 mb-5">
             <span className="dark:text-primary-light_purple text-primary-purple font-medium text-base transform rotate-45">
-              A
+              B
             </span>
           </div>
         </div>

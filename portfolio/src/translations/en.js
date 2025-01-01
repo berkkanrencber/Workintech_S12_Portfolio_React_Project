@@ -1,7 +1,8 @@
 export default {
     navbar: {
-      darkMode: "Dark Mode",
-      languageSwitch: "Switch to Turkish",
+      darkMode: "DARK MODE",
+      lightMode: "LIGHT MODE",
+      languageSwitch: "TÜRKÇE",
       skills: "Skills",
       projects: "Projects",
       hireMe: "Hire me",

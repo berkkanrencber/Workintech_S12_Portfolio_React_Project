@@ -17,10 +17,10 @@ const Skills = () => {
         {skills.map((skill, index) => (
           <div key={index} className="text-left">
             <h3 className="text-xl font-normal text-primary-purple dark:text-primary-light_purple mb-2">
-              {skill}
+              {skill.name}
             </h3>
             <p className="text-sm text-primary-text_gray dark:text-white">
-              Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+              {skill.description}
             </p>
           </div>
         ))}
